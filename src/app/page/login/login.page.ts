@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/service/theme.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  public temaEscuroHabilitadoBoolean:Boolean = false;
 
-  ngOnInit() {
+  constructor(
+    private themeService: ThemeService
+  ) { }
+
+  ngOnInit() { 
+    this.themeService.carregarTema();
+    this.temaEscuroHabilitadoBoolean = document.body.classList.contains("escuro");
+  }
+
+  public alternarTema() {
+    this.themeService.alterarTema();
+    this.temaEscuroHabilitadoBoolean = !this.temaEscuroHabilitadoBoolean;
   }
 
 }

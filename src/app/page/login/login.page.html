@@ -1,3 +1,13 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar [style]="temaEscuroHabilitadoBoolean ? '--background: #000000; --color: #FFFFFF;' : '--background: #FFFFFF; --color: #000000;'">
+    <ion-buttons slot="end">
+      <ion-button (click)="alternarTema()">
+        <ion-icon [name]="temaEscuroHabilitadoBoolean ? 'moon' : 'sunny'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content class="ion-padding">
 
   <section id="logomarca">
@@ -8,17 +18,17 @@
 
     <form>
 
-        <div class="campo">
-          <ion-input label="Nome Completo" labelPlacement="floating" [counter]="false" maxlength="80"></ion-input>
-        </div>
+      <div class="campo">
+        <ion-input label="E-mail" labelPlacement="floating" [counter]="false" maxlength="80"></ion-input>
+      </div>
 
-        <div class="campo">
-          <ion-input label="E-mail" labelPlacement="floating" [counter]="false" maxlength="80"></ion-input>
-        </div>
+      <div class="campo">
+        <ion-input type="password" label="Senha" labelPlacement="floating" [counter]="false" maxlength="80"></ion-input>
+      </div>
 
-        <div class="campo">
-          <ion-button routerLink="/principal">Acessar</ion-button>
-        </div>
+      <div class="campo">
+        <ion-button routerLink="/principal">Acessar</ion-button>
+      </div>
 
     </form>
 
