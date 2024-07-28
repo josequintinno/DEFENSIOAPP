@@ -1,0 +1,24 @@
+#logomarca {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    margin-top: 10%;
+    color: #4d8dff;
+}
+
+#formulario {
+    margin-top: 10%;
+}
+
+#formulario .campo ion-input {
+    border-bottom: solid #4d8dff 3px;
+}
+
+#formulario ion-button {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-transform: initial;
+}
