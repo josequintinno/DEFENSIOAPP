@@ -2,7 +2,7 @@
   <ion-toolbar [style]="temaEscuroHabilitadoBoolean ? '--background: #000000; --color: #FFFFFF;' : '--background: #FFFFFF; --color: #000000;'">
     <ion-buttons slot="end">
       <ion-button (click)="alternarTema()">
-        <ion-icon [name]="temaEscuroHabilitadoBoolean ? 'moon' : 'sunny'"></ion-icon>
+        <ion-icon [name]="!temaEscuroHabilitadoBoolean ? 'moon' : 'sunny'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
