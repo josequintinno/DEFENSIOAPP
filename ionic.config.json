@@ -1,0 +1,7 @@
+{
+  "name": "DEFENSIOAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
