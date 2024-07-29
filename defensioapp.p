@@ -6,3 +6,4 @@
 
         ⚪ feature: Implementar tela de Login
         ⚪ feature: Implementar modo light e dark
+        ⚪ feature: Implementar tela de Cadastro de Usuário

@@ -16,7 +16,7 @@ export class PrincipalPage implements OnInit {
 
   ionViewDidEnter() {
     setTimeout(() => {
-      this.navController.navigateForward(['/login']);
+      this.navController.navigateForward(['/signup']);
     }, 2000);
   }
 

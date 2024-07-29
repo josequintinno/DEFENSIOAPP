@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Welcome</h1>
+  <h3>Sign in to continue!</h3>
+
+  <section id="formulario">
+
+    <form>
+
+      <div class="form-fild">
+        <label for="nome-completo-input" [ngClass]="isCampoNomeCompletoInputPreenchido ? 'label-focus': ''">Nome Completo</label>
+        <input id="nome-completo-input" name="nome-completo-input" type="text" (focus)="isCampoNomeCompletoInputPreenchido = true" (blur)="onBlur($event)"/>
+      </div>
+
+      <div class="form-fild">
+        <label [ngClass]="isCampoEmailInputPreenchido ? 'label-focus': ''">E-mail</label>
+        <input type="text" (focus)="isCampoEmailInputPreenchido = true" (blur)="onBlur($event)" />
+      </div>
+
+      <div class="form-fild">
+        <label [ngClass]="isCampoSenhaInputPreenchido ? 'label-focus': ''">Senha</label>
+        <input type="password" (focus)="isCampoSenhaInputPreenchido = true" (blur)="onBlur($event)" />
+      </div>
+
+      <div class="form-fild">
+        <label [ngClass]="isCampoConfirmarSenhaInputPreenchido ? 'label-focus': ''">Confirmar Senha</label>
+        <input type="password" (focus)="isCampoConfirmarSenhaInputPreenchido = true" (blur)="onBlur($event)"/>
+      </div>
+
+      <div class="form-fild">
+        <ion-button (click)="redirecionarTelaPrincipal()">Cadastrar</ion-button>
+      </div>
+
+      <div class="form-fild">
+        <ion-button class="botao-facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-text>Registrar com Facebook</ion-text>
+        </ion-button>
+      </div>
+
+    </form>
+
+  </section>
+
 </ion-content>

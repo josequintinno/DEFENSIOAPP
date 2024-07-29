@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupPage implements OnInit {
 
-  constructor() { }
+  public isFoco: Boolean = false;
 
-  ngOnInit() {
+  public isCampoNomeCompletoInputPreenchido: Boolean = false;
+  public isCampoEmailInputPreenchido: Boolean = false;
+  public isCampoSenhaInputPreenchido: Boolean = false;
+  public isCampoConfirmarSenhaInputPreenchido: Boolean = false;
+
+  constructor(
+    private navController: NavController
+  ) { }
+
+  ngOnInit() { }
+
+  public onFocus(inputID: String) {
+    debugger;
+    this.isCampoNomeCompletoInputPreenchido = true;
+    this.isCampoEmailInputPreenchido = true;
+    this.isCampoSenhaInputPreenchido = true;
+    this.isCampoConfirmarSenhaInputPreenchido = true;
+  }
+
+  public onBlur(event: any) {
+    if (!event.target.value) {
+      this.isFoco = false;
+    }
+  }
+
+  public redirecionarTelaPrincipal() {
+    setTimeout(() => {
+      this.navController.navigateForward(["/principal"]);
+    }, 1000);
   }
 
 }
